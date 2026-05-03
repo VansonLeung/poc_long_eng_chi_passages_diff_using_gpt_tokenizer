@@ -1,0 +1,1552 @@
+{
+  "encoding": "cl100k_base",
+  "chunk_size_tokens": 120,
+  "original_token_count": 1559,
+  "masked_token_count": 1436,
+  "replacement_count": 55,
+  "replacements": [
+    {
+      "index": 1,
+      "opcode": "replace",
+      "original_token_start": 5,
+      "original_token_end": 11,
+      "masked_token_start": 5,
+      "masked_token_end": 8,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " 陈小明\n",
+      "masked_text": " [NAME]\n",
+      "original_tokens": [
+        220,
+        14309,
+        230,
+        31809,
+        31958,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        7687,
+        933
+      ]
+    },
+    {
+      "index": 3,
+      "opcode": "replace",
+      "original_token_start": 14,
+      "original_token_end": 19,
+      "masked_token_start": 11,
+      "masked_token_end": 15,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " E12345678\n",
+      "masked_text": " [PASSPORT]\n",
+      "original_tokens": [
+        469,
+        4513,
+        10961,
+        2495,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        50892,
+        5205,
+        933
+      ]
+    },
+    {
+      "index": 5,
+      "opcode": "replace",
+      "original_token_start": 21,
+      "original_token_end": 30,
+      "masked_token_start": 17,
+      "masked_token_end": 20,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " +852 9123 4567\n",
+      "masked_text": " [PHONE]\n",
+      "original_tokens": [
+        489,
+        24571,
+        220,
+        22750,
+        18,
+        220,
+        10961,
+        22,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        76098,
+        933
+      ]
+    },
+    {
+      "index": 7,
+      "opcode": "replace",
+      "original_token_start": 32,
+      "original_token_end": 51,
+      "masked_token_start": 22,
+      "masked_token_end": 25,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " 香港中环皇后大道中88号 12/F\n",
+      "masked_text": " [ADDRESS]\n",
+      "original_tokens": [
+        18630,
+        99,
+        247,
+        35086,
+        107,
+        16325,
+        87412,
+        9444,
+        229,
+        34547,
+        27384,
+        45893,
+        16325,
+        2421,
+        18476,
+        220,
+        717,
+        12598,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        62105,
+        933
+      ]
+    },
+    {
+      "index": 9,
+      "opcode": "replace",
+      "original_token_start": 53,
+      "original_token_end": 61,
+      "masked_token_start": 27,
+      "masked_token_end": 30,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " xiaoming.chen@example.com\n",
+      "masked_text": " [EMAIL]\n",
+      "original_tokens": [
+        865,
+        689,
+        18238,
+        5442,
+        268,
+        36587,
+        916,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        37004,
+        933
+      ]
+    },
+    {
+      "index": 11,
+      "opcode": "replace",
+      "original_token_start": 67,
+      "original_token_end": 74,
+      "masked_token_start": 36,
+      "masked_token_end": 40,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " chen_xm_88\n",
+      "masked_text": " [WECHAT]\n",
+      "original_tokens": [
+        523,
+        268,
+        3292,
+        76,
+        62,
+        2421,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        12739,
+        61817,
+        933
+      ]
+    },
+    {
+      "index": 13,
+      "opcode": "replace",
+      "original_token_start": 76,
+      "original_token_end": 87,
+      "masked_token_start": 42,
+      "masked_token_end": 46,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " 信和集团 Hong Kong Holdings Limited\n",
+      "masked_text": " [COMPANY]\n",
+      "original_tokens": [
+        220,
+        22023,
+        34208,
+        43167,
+        9921,
+        95,
+        19730,
+        18711,
+        54642,
+        19439,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        24637,
+        17742,
+        933
+      ]
+    },
+    {
+      "index": 15,
+      "opcode": "replace",
+      "original_token_start": 89,
+      "original_token_end": 93,
+      "masked_token_start": 48,
+      "masked_token_end": 51,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " Senior Operations Manager\n",
+      "masked_text": " [POSITION]\n",
+      "original_tokens": [
+        19903,
+        25927,
+        10790,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        60092,
+        933
+      ]
+    },
+    {
+      "index": 17,
+      "opcode": "replace",
+      "original_token_start": 95,
+      "original_token_end": 111,
+      "masked_token_start": 53,
+      "masked_token_end": 58,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " 中环港岛道 18 号, 33/F\n",
+      "masked_text": " [OFFICE_ADDRESS]\n",
+      "original_tokens": [
+        73958,
+        87412,
+        35086,
+        107,
+        58699,
+        249,
+        45893,
+        220,
+        972,
+        27951,
+        115,
+        11,
+        220,
+        1644,
+        12598,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        28167,
+        5604,
+        20739,
+        933
+      ]
+    },
+    {
+      "index": 19,
+      "opcode": "replace",
+      "original_token_start": 113,
+      "original_token_end": 118,
+      "masked_token_start": 60,
+      "masked_token_end": 64,
+      "original_chunk": 0,
+      "masked_chunk": 0,
+      "original_text": " Global Treasury & Compliance\n",
+      "masked_text": " [DEPARTMENT]\n",
+      "original_tokens": [
+        8121,
+        32991,
+        612,
+        60270,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        1170,
+        79465,
+        933
+      ]
+    },
+    {
+      "index": 21,
+      "opcode": "replace",
+      "original_token_start": 120,
+      "original_token_end": 127,
+      "masked_token_start": 66,
+      "masked_token_end": 70,
+      "original_chunk": 1,
+      "masked_chunk": 0,
+      "original_text": " 李慧芳\n",
+      "masked_text": " [MANAGER]\n",
+      "original_tokens": [
+        61696,
+        236,
+        162,
+        92871,
+        45951,
+        111,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        23111,
+        28750,
+        933
+      ]
+    },
+    {
+      "index": 23,
+      "opcode": "replace",
+      "original_token_start": 130,
+      "original_token_end": 132,
+      "masked_token_start": 73,
+      "masked_token_end": 78,
+      "original_chunk": 1,
+      "masked_chunk": 0,
+      "original_text": " China\n",
+      "masked_text": " [NATIONALITY]\n",
+      "original_tokens": [
+        5734,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        45,
+        40685,
+        3414,
+        933
+      ]
+    },
+    {
+      "index": 25,
+      "opcode": "replace",
+      "original_token_start": 135,
+      "original_token_end": 143,
+      "masked_token_start": 81,
+      "masked_token_end": 85,
+      "original_chunk": 1,
+      "masked_chunk": 0,
+      "original_text": " 421123198803076432\n",
+      "masked_text": " [ID_CARD]\n",
+      "original_tokens": [
+        220,
+        18245,
+        4513,
+        3753,
+        20899,
+        26247,
+        16739,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        926,
+        46629,
+        933
+      ]
+    },
+    {
+      "index": 27,
+      "opcode": "replace",
+      "original_token_start": 146,
+      "original_token_end": 155,
+      "masked_token_start": 88,
+      "masked_token_end": 93,
+      "original_chunk": 1,
+      "masked_chunk": 0,
+      "original_text": " 012-3456-7890\n",
+      "masked_text": " [BANK_ACCOUNT]\n",
+      "original_tokens": [
+        220,
+        11531,
+        12,
+        12901,
+        21,
+        12,
+        16474,
+        15,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        33,
+        16395,
+        39931,
+        933
+      ]
+    },
+    {
+      "index": 29,
+      "opcode": "replace",
+      "original_token_start": 158,
+      "original_token_end": 164,
+      "masked_token_start": 96,
+      "masked_token_end": 98,
+      "original_chunk": 1,
+      "masked_chunk": 0,
+      "original_text": " HKG-2026-T",
+      "masked_text": " [T",
+      "original_tokens": [
+        43317,
+        38,
+        12,
+        2366,
+        21,
+        9469
+      ],
+      "masked_tokens": [
+        510,
+        51
+      ]
+    },
+    {
+      "index": 31,
+      "opcode": "replace",
+      "original_token_start": 165,
+      "original_token_end": 169,
+      "masked_token_start": 99,
+      "masked_token_end": 101,
+      "original_chunk": 1,
+      "masked_chunk": 0,
+      "original_text": "-0034\n",
+      "masked_text": "_NUMBER]\n",
+      "original_tokens": [
+        12,
+        6268,
+        19,
+        198
+      ],
+      "masked_tokens": [
+        19925,
+        933
+      ]
+    },
+    {
+      "index": 33,
+      "opcode": "replace",
+      "original_token_start": 172,
+      "original_token_end": 179,
+      "masked_token_start": 104,
+      "masked_token_end": 111,
+      "original_chunk": 1,
+      "masked_chunk": 0,
+      "original_text": " 2014年3月\n",
+      "masked_text": " [CUSTOMER_SINCE]\n",
+      "original_tokens": [
+        220,
+        679,
+        19,
+        8107,
+        18,
+        9953,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        62141,
+        643,
+        1117,
+        691,
+        2152,
+        933
+      ]
+    },
+    {
+      "index": 35,
+      "opcode": "replace",
+      "original_token_start": 182,
+      "original_token_end": 185,
+      "masked_token_start": 114,
+      "masked_token_end": 120,
+      "original_chunk": 1,
+      "masked_chunk": 0,
+      "original_text": " VIP client\n",
+      "masked_text": " [RELATIONSHIP_STATUS]\n",
+      "original_tokens": [
+        36169,
+        3016,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        50151,
+        3579,
+        71320,
+        9532,
+        933
+      ]
+    },
+    {
+      "index": 37,
+      "opcode": "replace",
+      "original_token_start": 188,
+      "original_token_end": 196,
+      "masked_token_start": 123,
+      "masked_token_end": 128,
+      "original_chunk": 1,
+      "masked_chunk": 1,
+      "original_text": " USD 5,120,000\n",
+      "masked_text": " [REVENUE]\n",
+      "original_tokens": [
+        20121,
+        220,
+        20,
+        11,
+        4364,
+        11,
+        931,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        793,
+        42122,
+        2279,
+        933
+      ]
+    },
+    {
+      "index": 39,
+      "opcode": "replace",
+      "original_token_start": 199,
+      "original_token_end": 201,
+      "masked_token_start": 131,
+      "masked_token_end": 137,
+      "original_chunk": 1,
+      "masked_chunk": 1,
+      "original_text": " AAA\n\n",
+      "masked_text": " [CREDIT_RATING]\n\n",
+      "original_tokens": [
+        48197,
+        271
+      ],
+      "masked_tokens": [
+        510,
+        34,
+        57563,
+        2632,
+        34657,
+        2595
+      ]
+    },
+    {
+      "index": 41,
+      "opcode": "replace",
+      "original_token_start": 413,
+      "original_token_end": 417,
+      "masked_token_start": 349,
+      "masked_token_end": 353,
+      "original_chunk": 3,
+      "masked_chunk": 2,
+      "original_text": " 58,420",
+      "masked_text": " [AMOUNT]",
+      "original_tokens": [
+        220,
+        2970,
+        11,
+        12819
+      ],
+      "masked_tokens": [
+        510,
+        1428,
+        7615,
+        60
+      ]
+    },
+    {
+      "index": 43,
+      "opcode": "replace",
+      "original_token_start": 419,
+      "original_token_end": 428,
+      "masked_token_start": 355,
+      "masked_token_end": 358,
+      "original_chunk": 3,
+      "masked_chunk": 2,
+      "original_text": " 7788-9900-1122",
+      "masked_text": " [ACCOUNT]",
+      "original_tokens": [
+        220,
+        23592,
+        23,
+        12,
+        19146,
+        15,
+        12,
+        7261,
+        17
+      ],
+      "masked_tokens": [
+        510,
+        74483,
+        60
+      ]
+    },
+    {
+      "index": 45,
+      "opcode": "replace",
+      "original_token_start": 435,
+      "original_token_end": 442,
+      "masked_token_start": 365,
+      "masked_token_end": 368,
+      "original_chunk": 3,
+      "masked_chunk": 3,
+      "original_text": "2026年4月30日",
+      "masked_text": "[DATE]",
+      "original_tokens": [
+        2366,
+        21,
+        8107,
+        19,
+        9953,
+        966,
+        9080
+      ],
+      "masked_tokens": [
+        58,
+        7242,
+        60
+      ]
+    },
+    {
+      "index": 47,
+      "opcode": "replace",
+      "original_token_start": 450,
+      "original_token_end": 458,
+      "masked_token_start": 376,
+      "masked_token_end": 379,
+      "original_chunk": 3,
+      "masked_chunk": 3,
+      "original_text": " xiaoming.chen@example.com。\n",
+      "masked_text": " [EMAIL].\n",
+      "original_tokens": [
+        865,
+        689,
+        18238,
+        5442,
+        268,
+        36587,
+        916,
+        9174
+      ],
+      "masked_tokens": [
+        510,
+        37004,
+        27218
+      ]
+    },
+    {
+      "index": 49,
+      "opcode": "replace",
+      "original_token_start": 479,
+      "original_token_end": 482,
+      "masked_token_start": 400,
+      "masked_token_end": 403,
+      "original_chunk": 3,
+      "masked_chunk": 3,
+      "original_text": " 2026",
+      "masked_text": " [YEAR]",
+      "original_tokens": [
+        220,
+        2366,
+        21
+      ],
+      "masked_tokens": [
+        510,
+        88301,
+        60
+      ]
+    },
+    {
+      "index": 51,
+      "opcode": "replace",
+      "original_token_start": 503,
+      "original_token_end": 518,
+      "masked_token_start": 424,
+      "masked_token_end": 432,
+      "original_chunk": 4,
+      "masked_chunk": 3,
+      "original_text": " 深圳华联供应链管理有限公司.\n",
+      "masked_text": " [BENEFICIARY_NAME].\n",
+      "original_tokens": [
+        6704,
+        115,
+        109,
+        12554,
+        111,
+        86461,
+        50182,
+        84844,
+        51611,
+        64414,
+        40452,
+        19361,
+        48249,
+        74318,
+        627
+      ],
+      "masked_tokens": [
+        510,
+        33,
+        965,
+        15229,
+        75176,
+        8812,
+        4813,
+        27218
+      ]
+    },
+    {
+      "index": 53,
+      "opcode": "replace",
+      "original_token_start": 528,
+      "original_token_end": 534,
+      "masked_token_start": 442,
+      "masked_token_end": 446,
+      "original_chunk": 4,
+      "masked_chunk": 3,
+      "original_text": " BOFPUS3N.\n",
+      "masked_text": " [SWIFT].\n",
+      "original_tokens": [
+        7967,
+        11960,
+        2078,
+        18,
+        45,
+        627
+      ],
+      "masked_tokens": [
+        510,
+        17268,
+        14627,
+        27218
+      ]
+    },
+    {
+      "index": 55,
+      "opcode": "replace",
+      "original_token_start": 545,
+      "original_token_end": 555,
+      "masked_token_start": 457,
+      "masked_token_end": 462,
+      "original_chunk": 4,
+      "masked_chunk": 3,
+      "original_text": " 2026-Q1-LOG-018。\n",
+      "masked_text": " [INVOICE_NUMBER].\n",
+      "original_tokens": [
+        220,
+        2366,
+        21,
+        29342,
+        16,
+        12,
+        7391,
+        12,
+        16745,
+        9174
+      ],
+      "masked_tokens": [
+        510,
+        691,
+        79015,
+        19925,
+        27218
+      ]
+    },
+    {
+      "index": 57,
+      "opcode": "replace",
+      "original_token_start": 647,
+      "original_token_end": 656,
+      "masked_token_start": 554,
+      "masked_token_end": 559,
+      "original_chunk": 5,
+      "masked_chunk": 4,
+      "original_text": " TRX-2026-04-009",
+      "masked_text": " [TRANSACTION_CODE]",
+      "original_tokens": [
+        5091,
+        55,
+        12,
+        2366,
+        21,
+        12,
+        2371,
+        12,
+        13858
+      ],
+      "masked_tokens": [
+        510,
+        49873,
+        47259,
+        10225,
+        60
+      ]
+    },
+    {
+      "index": 59,
+      "opcode": "replace",
+      "original_token_start": 669,
+      "original_token_end": 679,
+      "masked_token_start": 572,
+      "masked_token_end": 577,
+      "original_chunk": 5,
+      "masked_chunk": 4,
+      "original_text": " TRX-2026-04-009。\n\n",
+      "masked_text": " [TRANSACTION_CODE].\n\n",
+      "original_tokens": [
+        5091,
+        55,
+        12,
+        2366,
+        21,
+        12,
+        2371,
+        12,
+        13858,
+        3490
+      ],
+      "masked_tokens": [
+        510,
+        49873,
+        47259,
+        10225,
+        30662
+      ]
+    },
+    {
+      "index": 61,
+      "opcode": "replace",
+      "original_token_start": 893,
+      "original_token_end": 902,
+      "masked_token_start": 791,
+      "masked_token_end": 797,
+      "original_chunk": 7,
+      "masked_chunk": 6,
+      "original_text": " 2026年5月12日.\n",
+      "masked_text": " [TRAVEL_DATE].\n",
+      "original_tokens": [
+        220,
+        2366,
+        21,
+        8107,
+        20,
+        9953,
+        717,
+        9080,
+        627
+      ],
+      "masked_tokens": [
+        510,
+        2434,
+        8253,
+        2818,
+        19007,
+        27218
+      ]
+    },
+    {
+      "index": 63,
+      "opcode": "replace",
+      "original_token_start": 905,
+      "original_token_end": 907,
+      "masked_token_start": 800,
+      "masked_token_end": 805,
+      "original_chunk": 7,
+      "masked_chunk": 6,
+      "original_text": " CX728",
+      "masked_text": " [FLIGHT_NUMBER]",
+      "original_tokens": [
+        49583,
+        24054
+      ],
+      "masked_tokens": [
+        510,
+        6254,
+        4735,
+        19925,
+        60
+      ]
+    },
+    {
+      "index": 65,
+      "opcode": "replace",
+      "original_token_start": 909,
+      "original_token_end": 913,
+      "masked_token_start": 807,
+      "masked_token_end": 813,
+      "original_chunk": 7,
+      "masked_chunk": 6,
+      "original_text": " 09:30",
+      "masked_text": " [DEPARTURE_TIME]",
+      "original_tokens": [
+        220,
+        2545,
+        25,
+        966
+      ],
+      "masked_tokens": [
+        510,
+        1170,
+        34590,
+        4622,
+        10257,
+        60
+      ]
+    },
+    {
+      "index": 67,
+      "opcode": "replace",
+      "original_token_start": 925,
+      "original_token_end": 933,
+      "masked_token_start": 825,
+      "masked_token_end": 832,
+      "original_chunk": 7,
+      "masked_chunk": 6,
+      "original_text": " 5 月 12 日上",
+      "masked_text": " [TRAVEL_DATE] 上",
+      "original_tokens": [
+        220,
+        20,
+        220,
+        9953,
+        220,
+        717,
+        76502,
+        17905
+      ],
+      "masked_tokens": [
+        510,
+        2434,
+        8253,
+        2818,
+        19007,
+        60,
+        65218
+      ]
+    },
+    {
+      "index": 69,
+      "opcode": "replace",
+      "original_token_start": 934,
+      "original_token_end": 938,
+      "masked_token_start": 833,
+      "masked_token_end": 839,
+      "original_chunk": 7,
+      "masked_chunk": 6,
+      "original_text": " 9:30",
+      "masked_text": " [DEPARTURE_TIME]",
+      "original_tokens": [
+        220,
+        24,
+        25,
+        966
+      ],
+      "masked_tokens": [
+        510,
+        1170,
+        34590,
+        4622,
+        10257,
+        60
+      ]
+    },
+    {
+      "index": 71,
+      "opcode": "replace",
+      "original_token_start": 952,
+      "original_token_end": 954,
+      "masked_token_start": 853,
+      "masked_token_end": 858,
+      "original_chunk": 7,
+      "masked_chunk": 7,
+      "original_text": " CX728",
+      "masked_text": " [FLIGHT_NUMBER]",
+      "original_tokens": [
+        49583,
+        24054
+      ],
+      "masked_tokens": [
+        510,
+        6254,
+        4735,
+        19925,
+        60
+      ]
+    },
+    {
+      "index": 73,
+      "opcode": "replace",
+      "original_token_start": 965,
+      "original_token_end": 968,
+      "masked_token_start": 869,
+      "masked_token_end": 875,
+      "original_chunk": 8,
+      "masked_chunk": 7,
+      "original_text": " Marina Bay Sands",
+      "masked_text": " [HOTEL_NAME]",
+      "original_tokens": [
+        52636,
+        9332,
+        79270
+      ],
+      "masked_tokens": [
+        510,
+        39,
+        1831,
+        2818,
+        4813,
+        60
+      ]
+    },
+    {
+      "index": 75,
+      "opcode": "replace",
+      "original_token_start": 969,
+      "original_token_end": 972,
+      "masked_token_start": 876,
+      "masked_token_end": 881,
+      "original_chunk": 8,
+      "masked_chunk": 7,
+      "original_text": " 5 May",
+      "masked_text": " [CHECKIN_DATE]",
+      "original_tokens": [
+        220,
+        20,
+        3297
+      ],
+      "masked_tokens": [
+        510,
+        35616,
+        691,
+        19007,
+        60
+      ]
+    },
+    {
+      "index": 77,
+      "opcode": "replace",
+      "original_token_start": 973,
+      "original_token_end": 977,
+      "masked_token_start": 882,
+      "masked_token_end": 887,
+      "original_chunk": 8,
+      "masked_chunk": 7,
+      "original_text": " 14 May.\n",
+      "masked_text": " [CHECKOUT_DATE].\n",
+      "original_tokens": [
+        220,
+        975,
+        3297,
+        627
+      ],
+      "masked_tokens": [
+        510,
+        35616,
+        3740,
+        19007,
+        27218
+      ]
+    },
+    {
+      "index": 79,
+      "opcode": "replace",
+      "original_token_start": 985,
+      "original_token_end": 997,
+      "masked_token_start": 895,
+      "masked_token_end": 909,
+      "original_chunk": 8,
+      "masked_chunk": 7,
+      "original_text": " 5 月 5 日至 14 日入",
+      "masked_text": " [CHECKIN_DATE] 至 [CHECKOUT_DATE] 入",
+      "original_tokens": [
+        220,
+        20,
+        220,
+        9953,
+        220,
+        20,
+        76502,
+        57237,
+        220,
+        975,
+        76502,
+        17701
+      ],
+      "masked_tokens": [
+        510,
+        35616,
+        691,
+        19007,
+        60,
+        59564,
+        111,
+        510,
+        35616,
+        3740,
+        19007,
+        60,
+        35469,
+        98
+      ]
+    },
+    {
+      "index": 81,
+      "opcode": "replace",
+      "original_token_start": 999,
+      "original_token_end": 1008,
+      "masked_token_start": 911,
+      "masked_token_end": 918,
+      "original_chunk": 8,
+      "masked_chunk": 7,
+      "original_text": "滨海湾金沙�",
+      "masked_text": " [HOTEL_NAME] �",
+      "original_tokens": [
+        73597,
+        101,
+        56235,
+        85300,
+        122,
+        35330,
+        31106,
+        247,
+        165
+      ],
+      "masked_tokens": [
+        510,
+        39,
+        1831,
+        2818,
+        4813,
+        60,
+        18630
+      ]
+    },
+    {
+      "index": 83,
+      "opcode": "replace",
+      "original_token_start": 1021,
+      "original_token_end": 1030,
+      "masked_token_start": 931,
+      "masked_token_end": 936,
+      "original_chunk": 8,
+      "masked_chunk": 7,
+      "original_text": " 2026年5月13日.\n",
+      "masked_text": " [MEETING_DATE].\n",
+      "original_tokens": [
+        220,
+        2366,
+        21,
+        8107,
+        20,
+        9953,
+        1032,
+        9080,
+        627
+      ],
+      "masked_tokens": [
+        510,
+        7614,
+        86951,
+        19007,
+        27218
+      ]
+    },
+    {
+      "index": 85,
+      "opcode": "replace",
+      "original_token_start": 1047,
+      "original_token_end": 1060,
+      "masked_token_start": 953,
+      "masked_token_end": 958,
+      "original_chunk": 8,
+      "masked_chunk": 7,
+      "original_text": " 2026 年 5 月 13 日。\n",
+      "masked_text": " [MEETING_DATE].\n",
+      "original_tokens": [
+        220,
+        2366,
+        21,
+        75677,
+        112,
+        220,
+        20,
+        220,
+        9953,
+        220,
+        1032,
+        76502,
+        9174
+      ],
+      "masked_tokens": [
+        510,
+        7614,
+        86951,
+        19007,
+        27218
+      ]
+    },
+    {
+      "index": 87,
+      "opcode": "replace",
+      "original_token_start": 1226,
+      "original_token_end": 1232,
+      "masked_token_start": 1124,
+      "masked_token_end": 1130,
+      "original_chunk": 10,
+      "masked_chunk": 9,
+      "original_text": "2026-04-01",
+      "masked_text": "[LOG_DATE_1]",
+      "original_tokens": [
+        2366,
+        21,
+        12,
+        2371,
+        12,
+        1721
+      ],
+      "masked_tokens": [
+        58,
+        7391,
+        19007,
+        62,
+        16,
+        60
+      ]
+    },
+    {
+      "index": 89,
+      "opcode": "replace",
+      "original_token_start": 1242,
+      "original_token_end": 1248,
+      "masked_token_start": 1140,
+      "masked_token_end": 1146,
+      "original_chunk": 10,
+      "masked_chunk": 9,
+      "original_text": "2026-04-02",
+      "masked_text": "[LOG_DATE_2]",
+      "original_tokens": [
+        2366,
+        21,
+        12,
+        2371,
+        12,
+        2437
+      ],
+      "masked_tokens": [
+        58,
+        7391,
+        19007,
+        62,
+        17,
+        60
+      ]
+    },
+    {
+      "index": 91,
+      "opcode": "replace",
+      "original_token_start": 1258,
+      "original_token_end": 1264,
+      "masked_token_start": 1156,
+      "masked_token_end": 1162,
+      "original_chunk": 10,
+      "masked_chunk": 9,
+      "original_text": "2026-04-03",
+      "masked_text": "[LOG_DATE_3]",
+      "original_tokens": [
+        2366,
+        21,
+        12,
+        2371,
+        12,
+        2839
+      ],
+      "masked_tokens": [
+        58,
+        7391,
+        19007,
+        62,
+        18,
+        60
+      ]
+    },
+    {
+      "index": 93,
+      "opcode": "replace",
+      "original_token_start": 1275,
+      "original_token_end": 1281,
+      "masked_token_start": 1173,
+      "masked_token_end": 1179,
+      "original_chunk": 10,
+      "masked_chunk": 9,
+      "original_text": "2026-04-03",
+      "masked_text": "[LOG_DATE_4]",
+      "original_tokens": [
+        2366,
+        21,
+        12,
+        2371,
+        12,
+        2839
+      ],
+      "masked_tokens": [
+        58,
+        7391,
+        19007,
+        62,
+        19,
+        60
+      ]
+    },
+    {
+      "index": 95,
+      "opcode": "replace",
+      "original_token_start": 1291,
+      "original_token_end": 1297,
+      "masked_token_start": 1189,
+      "masked_token_end": 1195,
+      "original_chunk": 10,
+      "masked_chunk": 9,
+      "original_text": "2026-04-04",
+      "masked_text": "[LOG_DATE_5]",
+      "original_tokens": [
+        2366,
+        21,
+        12,
+        2371,
+        12,
+        2371
+      ],
+      "masked_tokens": [
+        58,
+        7391,
+        19007,
+        62,
+        20,
+        60
+      ]
+    },
+    {
+      "index": 97,
+      "opcode": "replace",
+      "original_token_start": 1306,
+      "original_token_end": 1314,
+      "masked_token_start": 1204,
+      "masked_token_end": 1207,
+      "original_chunk": 10,
+      "masked_chunk": 10,
+      "original_text": " xiaoming.chen@example.com.\n\n",
+      "masked_text": " [EMAIL].\n\n",
+      "original_tokens": [
+        865,
+        689,
+        18238,
+        5442,
+        268,
+        36587,
+        916,
+        382
+      ],
+      "masked_tokens": [
+        510,
+        37004,
+        30662
+      ]
+    },
+    {
+      "index": 99,
+      "opcode": "replace",
+      "original_token_start": 1335,
+      "original_token_end": 1343,
+      "masked_token_start": 1228,
+      "masked_token_end": 1233,
+      "original_chunk": 11,
+      "masked_chunk": 10,
+      "original_text": " Ms. Li Wai Fong.\n",
+      "masked_text": " [SIGNATORY_NAME].\n",
+      "original_tokens": [
+        16450,
+        13,
+        14851,
+        468,
+        2192,
+        435,
+        647,
+        627
+      ],
+      "masked_tokens": [
+        510,
+        55172,
+        88358,
+        4813,
+        27218
+      ]
+    },
+    {
+      "index": 101,
+      "opcode": "replace",
+      "original_token_start": 1383,
+      "original_token_end": 1390,
+      "masked_token_start": 1273,
+      "masked_token_end": 1279,
+      "original_chunk": 11,
+      "masked_chunk": 10,
+      "original_text": " 2026年5月.\n",
+      "masked_text": " [HOLIDAY_MONTH].\n",
+      "original_tokens": [
+        220,
+        2366,
+        21,
+        8107,
+        20,
+        9953,
+        627
+      ],
+      "masked_tokens": [
+        510,
+        39,
+        59351,
+        3097,
+        49123,
+        27218
+      ]
+    },
+    {
+      "index": 103,
+      "opcode": "replace",
+      "original_token_start": 1516,
+      "original_token_end": 1521,
+      "masked_token_start": 1405,
+      "masked_token_end": 1410,
+      "original_chunk": 12,
+      "masked_chunk": 11,
+      "original_text": "Hong Kong Holdings Limited\n",
+      "masked_text": "[COMPANY_NAME]\n",
+      "original_tokens": [
+        86809,
+        18711,
+        54642,
+        19439,
+        198
+      ],
+      "masked_tokens": [
+        58,
+        24637,
+        17742,
+        4813,
+        933
+      ]
+    },
+    {
+      "index": 105,
+      "opcode": "replace",
+      "original_token_start": 1523,
+      "original_token_end": 1532,
+      "masked_token_start": 1412,
+      "masked_token_end": 1417,
+      "original_chunk": 12,
+      "masked_chunk": 11,
+      "original_text": " treasury-support@hkhldgs.com\n",
+      "masked_text": " [SUPPORT_EMAIL]\n",
+      "original_tokens": [
+        79353,
+        57047,
+        31,
+        71,
+        31764,
+        509,
+        5981,
+        916,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        50,
+        16911,
+        30648,
+        933
+      ]
+    },
+    {
+      "index": 107,
+      "opcode": "replace",
+      "original_token_start": 1535,
+      "original_token_end": 1544,
+      "masked_token_start": 1420,
+      "masked_token_end": 1425,
+      "original_chunk": 12,
+      "masked_chunk": 11,
+      "original_text": " +852 1234 5678\n",
+      "masked_text": " [HOTLINE]\n",
+      "original_tokens": [
+        489,
+        24571,
+        220,
+        4513,
+        19,
+        220,
+        19282,
+        23,
+        198
+      ],
+      "masked_tokens": [
+        510,
+        39,
+        1831,
+        8429,
+        933
+      ]
+    },
+    {
+      "index": 109,
+      "opcode": "replace",
+      "original_token_start": 1547,
+      "original_token_end": 1555,
+      "masked_token_start": 1428,
+      "masked_token_end": 1432,
+      "original_chunk": 12,
+      "masked_chunk": 11,
+      "original_text": " 2026-04-01\n\n",
+      "masked_text": " [DOCUMENT_VERSION]\n\n",
+      "original_tokens": [
+        220,
+        2366,
+        21,
+        12,
+        2371,
+        12,
+        1721,
+        271
+      ],
+      "masked_tokens": [
+        510,
+        45197,
+        10907,
+        2595
+      ]
+    }
+  ]
+}
