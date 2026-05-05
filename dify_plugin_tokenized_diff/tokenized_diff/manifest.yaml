@@ -1,0 +1,36 @@
+version: 0.0.1
+type: plugin
+author: vansonleung
+name: tokenized_diff
+label:
+  en_US: tokenized_diff
+  ja_JP: tokenized_diff
+  zh_Hans: tokenized_diff
+  pt_BR: tokenized_diff
+description:
+  en_US: tokenized diff
+  ja_JP: tokenized diff
+  zh_Hans: tokenized diff
+  pt_BR: tokenized diff
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/tokenized_diff.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-05-03T19:49:57.807636+08:00
+privacy: PRIVACY.md
+repo: https://github.com/VansonLeung/dify_plugin_tokenized_diff
+verified: false

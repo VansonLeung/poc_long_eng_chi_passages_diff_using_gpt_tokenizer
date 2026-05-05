@@ -1,0 +1,49 @@
+identity:
+  name: "diff_strings_line_by_line"
+  author: "vansonleung"
+  label:
+    en_US: "diff strings line by line"
+    zh_Hans: "逐行 diff strings"
+    pt_BR: "diff strings linha por linha"
+    ja_JP: "行単位で diff strings"
+description:
+  human:
+    en_US: "Diff two strings line by line after filtering blank trimmed lines."
+    zh_Hans: "过滤空白行后，逐行比较两个字符串。"
+    pt_BR: "Compare duas strings linha por linha depois de filtrar linhas vazias."
+    ja_JP: "空行を除外して 2 つの文字列を行単位で比較します。"
+  llm: "Split both strings by newline, keep only non-empty trimmed lines, compare by shared line index, and return the stringified JSON result."
+parameters:
+  - name: string_a
+    type: string
+    required: true
+    label:
+      en_US: String A
+      zh_Hans: 字符串 A
+      pt_BR: String A
+      ja_JP: 文字列 A
+    human_description:
+      en_US: "The original multi-line string."
+      zh_Hans: "原始多行字符串。"
+      pt_BR: "A string original com varias linhas."
+      ja_JP: "元の複数行文字列です。"
+    llm_description: "The original multi-line string to diff line by line."
+    form: llm
+  - name: string_b
+    type: string
+    required: true
+    label:
+      en_US: String B
+      zh_Hans: 字符串 B
+      pt_BR: String B
+      ja_JP: 文字列 B
+    human_description:
+      en_US: "The masked or changed multi-line string."
+      zh_Hans: "脱敏后或变更后的多行字符串。"
+      pt_BR: "A string mascarada ou alterada com varias linhas."
+      ja_JP: "マスク後または変更後の複数行文字列です。"
+    llm_description: "The changed multi-line string to compare against string_a by filtered line index."
+    form: llm
+extra:
+  python:
+    source: tools/diff_strings_line_by_line.py

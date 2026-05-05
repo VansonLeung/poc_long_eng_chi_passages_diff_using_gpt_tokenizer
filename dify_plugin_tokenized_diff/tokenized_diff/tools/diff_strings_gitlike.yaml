@@ -1,0 +1,49 @@
+identity:
+  name: "diff_strings_gitlike"
+  author: "vansonleung"
+  label:
+    en_US: "diff strings gitlike"
+    zh_Hans: "gitlike diff strings"
+    pt_BR: "diff strings gitlike"
+    ja_JP: "gitlike diff strings"
+description:
+  human:
+    en_US: "Diff two strings with git-like line alignment after dropping blank trimmed lines on both sides."
+    zh_Hans: "在两侧都删除空白行后，以接近 git diff 的方式比较两个字符串。"
+    pt_BR: "Compare duas strings com alinhamento semelhante ao git diff apos remover linhas vazias em ambos os lados."
+    ja_JP: "両側で空白行を除外した後、git diff に近い行アラインメントで 2 つの文字列を比較します。"
+  llm: "Split both strings by newline, drop blank trimmed lines on both sides, align lines in a git-like way, refine replace blocks, and return the stringified JSON result."
+parameters:
+  - name: string_a
+    type: string
+    required: true
+    label:
+      en_US: String A
+      zh_Hans: 字符串 A
+      pt_BR: String A
+      ja_JP: 文字列 A
+    human_description:
+      en_US: "The original multi-line string."
+      zh_Hans: "原始多行字符串。"
+      pt_BR: "A string original com varias linhas."
+      ja_JP: "元の複数行文字列です。"
+    llm_description: "The original multi-line string to diff with git-like alignment."
+    form: llm
+  - name: string_b
+    type: string
+    required: true
+    label:
+      en_US: String B
+      zh_Hans: 字符串 B
+      pt_BR: String B
+      ja_JP: 文字列 B
+    human_description:
+      en_US: "The changed multi-line string."
+      zh_Hans: "变更后的多行字符串。"
+      pt_BR: "A string alterada com varias linhas."
+      ja_JP: "変更後の複数行文字列です。"
+    llm_description: "The changed multi-line string to compare against string_a with git-like alignment."
+    form: llm
+extra:
+  python:
+    source: tools/diff_strings_gitlike.py

@@ -1,0 +1,49 @@
+identity:
+  name: "diff_strings_by_json"
+  author: "vansonleung"
+  label:
+    en_US: "diff strings by JSON"
+    zh_Hans: "按 JSON diff strings"
+    pt_BR: "diff strings por JSON"
+    ja_JP: "JSON で diff strings"
+description:
+  human:
+    en_US: "Diff two stringified JSON arrays using line-array replacement logic."
+    zh_Hans: "按行数组替换逻辑比较两个字符串化 JSON 数组。"
+    pt_BR: "Compare dois arrays JSON em formato string usando logica de substituicao por linhas."
+    ja_JP: "文字列化された 2 つの JSON 配列を行配列ロジックで比較します。"
+  llm: "Parse both inputs as JSON arrays of strings, then diff them with the JSON line-array mapping logic and return the stringified JSON result."
+parameters:
+  - name: stringified_json_a
+    type: string
+    required: true
+    label:
+      en_US: Stringified JSON A
+      zh_Hans: 字符串化 JSON A
+      pt_BR: JSON em string A
+      ja_JP: 文字列化 JSON A
+    human_description:
+      en_US: "The original stringified JSON array."
+      zh_Hans: "原始字符串化 JSON 数组。"
+      pt_BR: "O array JSON original em texto."
+      ja_JP: "元の文字列化 JSON 配列です。"
+    llm_description: "The original JSON string to diff."
+    form: llm
+  - name: stringified_json_b
+    type: string
+    required: true
+    label:
+      en_US: Stringified JSON B
+      zh_Hans: 字符串化 JSON B
+      pt_BR: JSON em string B
+      ja_JP: 文字列化 JSON B
+    human_description:
+      en_US: "The changed stringified JSON array."
+      zh_Hans: "变更后的字符串化 JSON 数组。"
+      pt_BR: "O array JSON alterado em texto."
+      ja_JP: "変更後の文字列化 JSON 配列です。"
+    llm_description: "The changed JSON string to diff against stringified_json_a."
+    form: llm
+extra:
+  python:
+    source: tools/diff_strings_by_json.py

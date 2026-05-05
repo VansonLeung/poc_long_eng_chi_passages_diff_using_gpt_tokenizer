@@ -1,0 +1,49 @@
+identity:
+  name: "diff_strings"
+  author: "vansonleung"
+  label:
+    en_US: "diff strings"
+    zh_Hans: "diff strings"
+    pt_BR: "diff strings"
+    ja_JP: "diff strings"
+description:
+  human:
+    en_US: "Diff two raw strings with GPT tokenization."
+    zh_Hans: "使用 GPT tokenizer 比较两个字符串。"
+    pt_BR: "Compare duas strings brutas com tokenizacao GPT."
+    ja_JP: "GPT tokenizer で 2 つの文字列を比較します。"
+  llm: "Diff two input strings by GPT token sequence and return the stringified JSON result."
+parameters:
+  - name: string_a
+    type: string
+    required: true
+    label:
+      en_US: String A
+      zh_Hans: 字符串 A
+      pt_BR: String A
+      ja_JP: 文字列 A
+    human_description:
+      en_US: "The original string."
+      zh_Hans: "原始字符串。"
+      pt_BR: "A string original."
+      ja_JP: "元の文字列です。"
+    llm_description: "The original string to diff."
+    form: llm
+  - name: string_b
+    type: string
+    required: true
+    label:
+      en_US: String B
+      zh_Hans: 字符串 B
+      pt_BR: String B
+      ja_JP: 文字列 B
+    human_description:
+      en_US: "The masked or changed string."
+      zh_Hans: "脱敏后或变更后的字符串。"
+      pt_BR: "A string mascarada ou alterada."
+      ja_JP: "マスク後または変更後の文字列です。"
+    llm_description: "The changed string to diff against string_a."
+    form: llm
+extra:
+  python:
+    source: tools/diff_strings.py
