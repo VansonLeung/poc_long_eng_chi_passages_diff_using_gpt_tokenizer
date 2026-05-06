@@ -1,0 +1,64 @@
+identity:
+  name: "diff_strings_flattened_compact"
+  author: "vansonleung"
+  label:
+    en_US: "diff strings flattened compact"
+    zh_Hans: "扁平化紧凑 diff strings"
+    pt_BR: "diff strings achatado compacto"
+    ja_JP: "flattened compact diff strings"
+description:
+  human:
+    en_US: "Collapse all whitespace to single spaces, treat both inputs as one logical line, then return only local change windows."
+    zh_Hans: "将所有空白折叠为单个空格，把两段文本视为一条逻辑长行，然后只返回局部变更窗口。"
+    pt_BR: "Colapsa todos os espacos em um unico espaco, trata as entradas como uma linha logica unica e retorna apenas janelas locais de mudanca."
+    ja_JP: "すべての空白を単一スペースに畳み込み、両方の入力を 1 本の論理行として扱い、差分のローカルウィンドウのみを返します。"
+  llm: "Flatten both strings by collapsing whitespace to single spaces, diff the whole text at token level, and return only merged local context windows around changes instead of full long lines."
+parameters:
+  - name: string_a
+    type: string
+    required: true
+    label:
+      en_US: String A
+      zh_Hans: 字符串 A
+      pt_BR: String A
+      ja_JP: 文字列 A
+    human_description:
+      en_US: "The original text to flatten and diff as one logical line."
+      zh_Hans: "要扁平化并作为单条逻辑行比较的原始文本。"
+      pt_BR: "O texto original para achatar e comparar como uma unica linha logica."
+      ja_JP: "フラット化して 1 本の論理行として比較する元のテキストです。"
+    llm_description: "The original text for flattened compact diff mode."
+    form: llm
+  - name: string_b
+    type: string
+    required: true
+    label:
+      en_US: String B
+      zh_Hans: 字符串 B
+      pt_BR: String B
+      ja_JP: 文字列 B
+    human_description:
+      en_US: "The changed text to flatten and compare against string_a."
+      zh_Hans: "要扁平化并与字符串 A 比较的变更文本。"
+      pt_BR: "O texto alterado para achatar e comparar com string_a."
+      ja_JP: "フラット化して string_a と比較する変更後のテキストです。"
+    llm_description: "The changed text for flattened compact diff mode."
+    form: llm
+  - name: context_window_chars
+    type: number
+    required: false
+    label:
+      en_US: Context Window Chars
+      zh_Hans: 上下文字符数
+      pt_BR: Caracteres da janela de contexto
+      ja_JP: コンテキスト文字数
+    human_description:
+      en_US: "Optional number of adjacent characters to include on each side of a detected change. Defaults to 30."
+      zh_Hans: "可选。每个变更两侧保留的相邻字符数，默认为 30。"
+      pt_BR: "Opcional. Numero de caracteres adjacentes incluidos em cada lado de uma mudanca detectada. O padrao e 30."
+      ja_JP: "任意指定です。検出された差分の左右に含める隣接文字数で、既定値は 30 です。"
+    llm_description: "Optional adjacent character count to include on each side of every merged change window."
+    form: form
+extra:
+  python:
+    source: tools/diff_strings_flattened_compact.py

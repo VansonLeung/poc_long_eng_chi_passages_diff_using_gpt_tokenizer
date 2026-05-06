@@ -1,0 +1,79 @@
+identity:
+  name: "diff_strings_script_normalized_compact"
+  author: "vansonleung"
+  label:
+    en_US: "diff strings script normalized compact"
+    zh_Hans: "按中英换行规则归一化的紧凑 diff strings"
+    pt_BR: "diff strings compacto com normalizacao por escrita"
+    ja_JP: "文字種改行正規化 compact diff strings"
+description:
+  human:
+    en_US: "Collapse repeated newlines to one, convert single newlines by adjacent English/Chinese characters, then diff as one logical stream and return local change windows."
+    zh_Hans: "先将连续换行折叠为一个，再按相邻中英文字符规则转换单个换行，然后将全文作为单一逻辑流比较并返回局部变更窗口。"
+    pt_BR: "Colapsa novas linhas repetidas em uma, converte novas linhas simples conforme caracteres ingleses/chineses adjacentes e depois compara como um fluxo logico unico retornando janelas locais de mudanca."
+    ja_JP: "連続改行を 1 つに畳み込み、前後の英字・中国語文字に応じて単一改行を変換した上で、全文を 1 本の論理ストリームとして比較し、ローカルな差分ウィンドウを返します。"
+  llm: "For each input, collapse repeated newlines to one newline, convert each single newline to either a space or empty string based on the nearest surrounding English or Chinese characters, then diff the whole text and return only local original and masked change windows."
+parameters:
+  - name: string_a
+    type: string
+    required: true
+    label:
+      en_US: String A
+      zh_Hans: 字符串 A
+      pt_BR: String A
+      ja_JP: 文字列 A
+    human_description:
+      en_US: "The original text to normalize by newline script rules and diff."
+      zh_Hans: "要按换行中英规则归一化并比较的原始文本。"
+      pt_BR: "O texto original para normalizar pelas regras de nova linha por escrita e comparar."
+      ja_JP: "改行の文字種ルールで正規化して比較する元のテキストです。"
+    llm_description: "The original text for script-normalized compact diff mode."
+    form: llm
+  - name: string_b
+    type: string
+    required: true
+    label:
+      en_US: String B
+      zh_Hans: 字符串 B
+      pt_BR: String B
+      ja_JP: 文字列 B
+    human_description:
+      en_US: "The changed text to normalize by newline script rules and diff against string_a."
+      zh_Hans: "要按换行中英规则归一化并与字符串 A 比较的变更文本。"
+      pt_BR: "O texto alterado para normalizar pelas regras de nova linha por escrita e comparar com string_a."
+      ja_JP: "改行の文字種ルールで正規化して string_a と比較する変更後のテキストです。"
+    llm_description: "The changed text for script-normalized compact diff mode."
+    form: llm
+  - name: context_window_chars
+    type: number
+    required: false
+    label:
+      en_US: Context Window Chars
+      zh_Hans: 上下文字符数
+      pt_BR: Caracteres da janela de contexto
+      ja_JP: コンテキスト文字数
+    human_description:
+      en_US: "Optional number of adjacent characters to include on each side of a detected change. Defaults to 30."
+      zh_Hans: "可选。每个变更两侧保留的相邻字符数，默认为 30。"
+      pt_BR: "Opcional. Numero de caracteres adjacentes incluidos em cada lado de uma mudanca detectada. O padrao e 30."
+      ja_JP: "任意指定です。検出された差分の左右に含める隣接文字数で、既定値は 30 です。"
+    llm_description: "Optional adjacent character count to include on each side of every merged change window."
+    form: form
+  - name: window_join_gap_chars
+    type: number
+    required: false
+    label:
+      en_US: Window Join Gap Chars
+      zh_Hans: 窗口合并间隔字符数
+      pt_BR: Caracteres de uniao entre janelas
+      ja_JP: ウィンドウ結合ギャップ文字数
+    human_description:
+      en_US: "Optional extra gap in characters for merging nearby change windows after normalization. Higher values merge windows more aggressively. Defaults to 0."
+      zh_Hans: "可选。归一化后合并相近变更窗口时允许的额外字符间隔。值越大，窗口合并越激进。默认为 0。"
+      pt_BR: "Opcional. Gap extra em caracteres para unir janelas de mudanca proximas apos a normalizacao. Valores maiores unem janelas de forma mais agressiva. O padrao e 0."
+      ja_JP: "任意指定です。正規化後に近接する差分ウィンドウを結合するための追加文字ギャップで、値が大きいほど積極的に結合します。既定値は 0 です。"
+    llm_description: "Optional extra character gap allowed when merging nearby normalized change windows. Larger values merge more aggressively."
+    form: form
+extra:
+  python:
+    source: tools/diff_strings_script_normalized_compact.py

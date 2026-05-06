@@ -1,0 +1,49 @@
+identity:
+  name: "diff_pdf_extracted_strings_gitlike_compact"
+  author: "vansonleung"
+  label:
+    en_US: "diff pdf extracted strings gitlike compact"
+    zh_Hans: "gitlike 紧凑 diff PDF 提取文本"
+    pt_BR: "diff gitlike compacto para texto extraido de PDF"
+    ja_JP: "PDF 抽出文字列の gitlike compact diff"
+description:
+  human:
+    en_US: "Normalize PDF line wraps, then diff two extracted strings with git-like alignment and return an LLM-friendly compact payload for long lines."
+    zh_Hans: "先归一化 PDF 换行，再以接近 git diff 的方式比较两个提取文本，并为长行返回适合 LLM 的紧凑结果。"
+    pt_BR: "Normaliza quebras de linha de PDF, depois compara duas strings extraidas com alinhamento tipo git e retorna um payload compacto para LLM em linhas longas."
+    ja_JP: "PDF の改行を正規化した後、git diff に近いアラインメントで 2 つの抽出文字列を比較し、長い行向けの LLM フレンドリーなコンパクト結果を返します。"
+  llm: "Drop blank trimmed lines, merge consecutive PDF body lines into logical lines while keeping standalone headers and action items separate, then run the git-like diff and return compact previews and local change windows for long lines."
+parameters:
+  - name: string_a
+    type: string
+    required: true
+    label:
+      en_US: String A
+      zh_Hans: 字符串 A
+      pt_BR: String A
+      ja_JP: 文字列 A
+    human_description:
+      en_US: "The original PDF-extracted text."
+      zh_Hans: "原始 PDF 提取文本。"
+      pt_BR: "O texto original extraido do PDF."
+      ja_JP: "元の PDF 抽出テキストです。"
+    llm_description: "The original PDF-extracted text to normalize and diff in compact mode."
+    form: llm
+  - name: string_b
+    type: string
+    required: true
+    label:
+      en_US: String B
+      zh_Hans: 字符串 B
+      pt_BR: String B
+      ja_JP: 文字列 B
+    human_description:
+      en_US: "The rewritten or changed PDF-extracted text."
+      zh_Hans: "重写后或变更后的 PDF 提取文本。"
+      pt_BR: "O texto extraido do PDF ja reescrito ou alterado."
+      ja_JP: "書き換え後または変更後の PDF 抽出テキストです。"
+    llm_description: "The rewritten PDF-extracted text to normalize and diff against string_a in compact mode."
+    form: llm
+extra:
+  python:
+    source: tools/diff_pdf_extracted_strings_gitlike_compact.py

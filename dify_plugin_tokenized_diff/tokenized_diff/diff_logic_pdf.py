@@ -4,6 +4,12 @@ import re
 from dataclasses import asdict, dataclass
 
 from diff_logic import ENCODING_NAME
+from diff_logic_compact import (
+    CONTEXT_WINDOW_CHARS,
+    LONG_LINE_THRESHOLD_CHARS,
+    PREVIEW_CHARS,
+    compact_gitlike_result,
+)
 from diff_logic_gitlike import build_gitlike_line_replacement_mapping_for_lines
 
 
@@ -134,3 +140,41 @@ def build_pdf_extract_gitlike_replacement_mapping(
         },
     )
     return result
+
+
+def build_pdf_extract_gitlike_compact_analysis(
+    original_text: str,
+    masked_text: str,
+    *,
+    encoding_name: str = ENCODING_NAME,
+    long_line_threshold_chars: int = LONG_LINE_THRESHOLD_CHARS,
+    context_window_chars: int = CONTEXT_WINDOW_CHARS,
+    preview_chars: int = PREVIEW_CHARS,
+) -> dict:
+    raw_result = build_pdf_extract_gitlike_replacement_mapping(
+        original_text,
+        masked_text,
+        encoding_name=encoding_name,
+    )
+    compact_result = compact_gitlike_result(
+        raw_result,
+        encoding_name=encoding_name,
+        long_line_threshold_chars=long_line_threshold_chars,
+        context_window_chars=context_window_chars,
+        preview_chars=preview_chars,
+    )
+
+    passthrough_keys = {
+        "normalization_strategy",
+        "original_filtered_line_count",
+        "masked_filtered_line_count",
+        "original_normalized_line_count",
+        "masked_normalized_line_count",
+        "original_normalization_map",
+        "masked_normalization_map",
+    }
+    for key in passthrough_keys:
+        if key in raw_result:
+            compact_result[key] = raw_result[key]
+
+    return compact_result

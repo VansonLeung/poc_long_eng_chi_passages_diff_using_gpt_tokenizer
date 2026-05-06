@@ -1,0 +1,49 @@
+identity:
+  name: "diff_strings_gitlike_compact"
+  author: "vansonleung"
+  label:
+    en_US: "diff strings gitlike compact"
+    zh_Hans: "gitlike 紧凑 diff strings"
+    pt_BR: "diff strings gitlike compacto"
+    ja_JP: "gitlike compact diff strings"
+description:
+  human:
+    en_US: "Diff two strings with git-like alignment and return an LLM-friendly compact payload for long lines."
+    zh_Hans: "以接近 git diff 的方式比较两个字符串，并为长行返回适合 LLM 的紧凑结果。"
+    pt_BR: "Compare duas strings com alinhamento tipo git e retorne um payload compacto para LLM em linhas longas."
+    ja_JP: "git diff に近いアラインメントで 2 つの文字列を比較し、長い行向けの LLM フレンドリーなコンパクト結果を返します。"
+  llm: "Run the git-like diff, but for long changed lines return only previews and local change windows instead of full long lines."
+parameters:
+  - name: string_a
+    type: string
+    required: true
+    label:
+      en_US: String A
+      zh_Hans: 字符串 A
+      pt_BR: String A
+      ja_JP: 文字列 A
+    human_description:
+      en_US: "The original multi-line string."
+      zh_Hans: "原始多行字符串。"
+      pt_BR: "A string original com varias linhas."
+      ja_JP: "元の複数行文字列です。"
+    llm_description: "The original string to diff in compact git-like mode."
+    form: llm
+  - name: string_b
+    type: string
+    required: true
+    label:
+      en_US: String B
+      zh_Hans: 字符串 B
+      pt_BR: String B
+      ja_JP: 文字列 B
+    human_description:
+      en_US: "The changed multi-line string."
+      zh_Hans: "变更后的多行字符串。"
+      pt_BR: "A string alterada com varias linhas."
+      ja_JP: "変更後の複数行文字列です。"
+    llm_description: "The changed string to compare against string_a in compact git-like mode."
+    form: llm
+extra:
+  python:
+    source: tools/diff_strings_gitlike_compact.py
