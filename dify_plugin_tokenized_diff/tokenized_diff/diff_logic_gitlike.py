@@ -232,6 +232,22 @@ def build_gitlike_line_replacement_mapping(
 ) -> dict:
     original_lines = split_non_empty_lines(original_text)
     masked_lines = split_non_empty_lines(masked_text)
+    return build_gitlike_line_replacement_mapping_for_lines(
+        original_lines,
+        masked_lines,
+        encoding_name=encoding_name,
+        line_filter="drop_blank_trimmed_lines",
+    )
+
+
+def build_gitlike_line_replacement_mapping_for_lines(
+    original_lines: list[str],
+    masked_lines: list[str],
+    *,
+    encoding_name: str = ENCODING_NAME,
+    line_filter: str = "custom_lines",
+    normalization: dict | None = None,
+) -> dict:
     matcher = SequenceMatcher(a=original_lines, b=masked_lines, autojunk=False)
     replacements: list[LineReplacement] = []
     hunks: list[DiffHunk] = []
@@ -304,7 +320,7 @@ def build_gitlike_line_replacement_mapping(
 
     return {
         "encoding": encoding_name,
-        "line_filter": "drop_blank_trimmed_lines",
+        "line_filter": line_filter,
         "alignment_strategy": "line_diff_then_refined_replace_blocks_then_token_diff",
         "original_line_count": len(original_lines),
         "masked_line_count": len(masked_lines),
@@ -333,4 +349,5 @@ def build_gitlike_line_replacement_mapping(
             for hunk in hunks
         ],
         "replacement_map": build_flat_replacement_map(replacements),
+        **(normalization or {}),
     }

@@ -59,6 +59,7 @@ tools:
   - tools/diff_strings.yaml
   - tools/diff_strings_line_by_line.yaml
   - tools/diff_strings_gitlike.yaml
+  - tools/diff_pdf_extracted_strings_gitlike.yaml
   - tools/diff_strings_by_json.yaml
 extra:
   python:
